@@ -224,11 +224,11 @@ function FeaturesGrid() {
   return (
     <section
       aria-labelledby="features-heading"
-      className="animate-fade-up delay-400 mt-16 w-full max-w-3xl sm:mt-20"
+      className="animate-fade-up delay-400 mb-14 w-full max-w-3xl sm:mb-16"
     >
       <h2
         id="features-heading"
-        className="font-display mb-8 text-center text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl"
+        className="font-display mb-10 text-center text-2xl font-semibold tracking-tight text-stone-900 sm:mb-12 sm:text-3xl"
       >
         מה מחכה לכם בפנים?
       </h2>
@@ -481,13 +481,15 @@ export default function WaitlistLanding() {
             צלמים וצלמות? תפסיקו לבזבז שעות על מיון תמונות ותקשורת מתישה.
           </h1>
 
-          <p className="animate-fade-up delay-300 mb-10 max-w-lg text-base leading-relaxed text-stone-600 sm:text-lg">
+          <p className="animate-fade-up delay-300 mb-12 max-w-lg text-base leading-relaxed text-stone-600 sm:mb-14 sm:text-lg">
             פלטפורמה אחת חכמה שמנהלת עבורך הכל: העלאת גלריות כבדות באיכות
             מקסימלית, שליחת קישור מעוצב ללקוחות, ומערכת בחירת תמונות אוטומטית
             שחוסכת לך זמן יקר.
           </p>
 
-          <div className="animate-fade-up delay-400 w-full max-w-md">
+          <FeaturesGrid />
+
+          <div className="animate-fade-up delay-500 w-full max-w-md pt-2 sm:pt-4">
             {submitState === "success" ? (
               <div
                 className="animate-scale-in rounded-2xl border border-stone-200/80 bg-white/90 px-8 py-12 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.1)] backdrop-blur-sm"
@@ -595,7 +597,6 @@ export default function WaitlistLanding() {
             )}
           </div>
 
-          <FeaturesGrid />
         </div>
 
         <footer className="animate-fade-up delay-400 mt-14 text-center sm:mt-16">
