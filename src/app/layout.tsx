@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Studio Gallery — רשימת המתנה",
+  title: "מערכת גלריות לצלמים — רשימת המתנה",
   description:
     "מערכת אחת לניהול גלריות, העלאת תמונות כבדות, בחירת לקוחות והורדות באיכות גבוהה. חודש ראשון חינם לנרשמות הראשונות.",
 };

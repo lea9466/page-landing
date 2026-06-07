@@ -464,8 +464,8 @@ export default function WaitlistLanding() {
       <main className="relative z-10 mx-auto flex w-full max-w-2xl flex-1 flex-col px-6 py-10 sm:px-8 sm:py-14">
         <header className="animate-fade-up mb-12 flex items-center justify-center gap-2.5 sm:mb-16">
           <CameraLogo />
-          <span className="font-display text-lg tracking-[0.25em] text-stone-600 uppercase">
-            Studio Gallery
+          <span className="font-display text-lg font-medium tracking-wide text-stone-700">
+            מערכת גלריות חכמה לצלמים וצלמות
           </span>
         </header>
 
@@ -498,7 +498,7 @@ export default function WaitlistLanding() {
                   תודה, הפרטים שלך נקלטו בהצלחה!
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-stone-500">
-                  שלחנו לך מייל אישור חגיגי (בדוק/י בתיבת הדואר הנכנס).
+                  שלחנו לך מייל אישור (בדוק/י בתיבת הדואר הנכנס).
                   <br />
                   נעדכן אותך עם קישור אישי למערכת ברגע ההשקה.
                 </p>
