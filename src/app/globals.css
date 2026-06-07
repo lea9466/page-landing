@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Heebo:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Heebo", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes check-draw {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-check-draw {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: check-draw 0.6s ease-out 0.2s forwards;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 8s ease-in-out infinite;
+}
+
+@keyframes photo-float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0)
+      rotate(var(--photo-rotate, 0deg));
+  }
+  33% {
+    transform: translateY(-8px) translateX(3px)
+      rotate(calc(var(--photo-rotate, 0deg) + 0.8deg));
+  }
+  66% {
+    transform: translateY(-14px) translateX(-2px)
+      rotate(calc(var(--photo-rotate, 0deg) - 0.5deg));
+  }
+}
+
+.animate-photo-float {
+  animation: photo-float 7s ease-in-out infinite;
+}
+
+.animate-photo-float-slow {
+  animation: photo-float 9s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-photo-float-delayed {
+  animation: photo-float 8s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 90s linear infinite;
+}
+
+.photo-frame {
+  background: white;
+  padding: 0.45rem;
+  border-radius: 1rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 20px 50px -12px rgba(0, 0, 0, 0.14);
+}
+
+.photo-frame-inner {
+  overflow: hidden;
+  border-radius: 0.65rem;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
